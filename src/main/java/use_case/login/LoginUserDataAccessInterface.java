@@ -3,7 +3,7 @@ package use_case.login;
 import entity.User;
 
 /**
- * DAO for the Login Use Case.
+ * Interface for accessing and manipulating login user data.
  */
 public interface LoginUserDataAccessInterface {
 
@@ -32,4 +32,10 @@ public interface LoginUserDataAccessInterface {
      * @param name the username of the user to set as the current user
      */
     void setCurrentUser(String name);
+
+    /**
+     * Retrieves the current logged-in user.
+     * @return the current user, or null if no user is logged in
+     */
+    Object getCurrentUser();
 }
